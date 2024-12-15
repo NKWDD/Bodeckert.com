@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo Deckert - Digital & Analog Artist</title>
+    <link rel="stylesheet" href="../stylesheet/stylesheet.css">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">Bo Deckert</div>
+            <div class="subtitle">digital | analog artist</div>
+        </div>
+        <!-- Hamburger menu button -->
+        <button class="hamburger-menu"   aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="desktop-nav">
+            <a href="/index.html">PORTFOLIO</a>
+            <a href="/pages/sketches.html">SKETCHES</a>
+            <a href="/pages/aboutme.html" class="nav-link">ABOUT ME</a>
+        </nav>
+        <nav class="mobile-nav">
+            <a href="/index.html">PORTFOLIO</a>
+            <a href="/pages/sketches.html">SKETCHES</a>
+            <a href="/pages/aboutme.html">ABOUT ME</a>
+        </nav>
+    </header>
+    <main>
+        <div class="image-text">
+            <img src="../images/image.svg" alt="Bo Deckert's About Me page">
+            <button class="view-resume" onclick="window.open('../pdf/portfolio.pdf', '_blank')">VIEW RESUME</button>
+        </div>
+    </main>
+    
+    <script>
+        // JavaScript to toggle the mobile menu
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburgerMenu = document.querySelector(".hamburger-menu");
+            const mobileNav = document.querySelector(".mobile-nav");
+
+            // Toggle the mobile menu on hamburger click
+            hamburgerMenu.addEventListener("click", () => {
+                mobileNav.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

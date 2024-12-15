@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo Deckert - Digital & Analog Artist</title>
+    <link rel="stylesheet" href="stylesheet/stylesheet.css">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">Bo Deckert</div>
+            <div class="subtitle">digital | analog artist</div>
+        </div>
+        <!-- Hamburger menu button -->
+        <button class="hamburger-menu"   aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="desktop-nav">
+            <a href="/index.html" class="nav-link">PORTFOLIO</a>
+            <a href="/pages/sketches.html">SKETCHES</a>
+            <a href="/pages/aboutme.html">ABOUT ME</a>
+        </nav>
+        <nav class="mobile-nav">
+            <a href="/index.html">PORTFOLIO</a>
+            <a href="/pages/sketches.html">SKETCHES</a>
+            <a href="/pages/aboutme.html">ABOUT ME</a>
+        </nav>
+    </header>
+
+
+    <div class="main-content">
+        <div class="main-artwork">
+            <a href="#" class="image-link">
+                <img src="/images/Astronaut.svg" alt="Astronaut on moon with Earth view" class="artwork-image">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <div class="main-artwork">
+            <a href="#" class="image-link">
+                <img src="/images/music.svg" alt="Astronaut on moon with Earth view" class="artwork-image">
+            </a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="main-artwork">
+            <a href="#" class="image-link">
+                <img src="images/portfolio_2024_2.jpg" alt="Astronaut on moon with Earth view" class="artwork-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-artwork">
+            <a href="#" class="image-link">
+                <img src="images/portfolio_2024_4.jpg" alt="Astronaut on moon with Earth view" class="artwork-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-artwork">
+            <a href="#" class="image-link">
+                <img src="images/portfolio_2024_5.jpg" alt="Astronaut on moon with Earth view" class="artwork-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-artwork">
+            <a href="#" class="image-link">
+                <img src="images/portfolio_update_2022_heroine.jpg" alt="Astronaut on moon with Earth view" class="artwork-image">
+            </a>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modal-image" src="">
+        </div>
+    
+        <button class="prev" id="prevBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                <path d="M15 19l-7-7 7-7" fill="none" stroke="white" stroke-width="2"/>
+            </svg>
+        </button>
+    
+        <button class="next" id="nextBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                <path d="M9 5l7 7-7 7" fill="none" stroke="white" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+    
+    
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image" src="">
+    </div>
+
+    <script src="javascript/javascript.js"></script>
+</body>
+<script>
+    // JavaScript to toggle the mobile menu
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const mobileNav = document.querySelector(".mobile-nav");
+
+        // Toggle the mobile menu on hamburger click
+        hamburgerMenu.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
+        });
+    });
+</script>
+</html>
