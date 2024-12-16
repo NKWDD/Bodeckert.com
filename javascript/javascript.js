@@ -107,36 +107,33 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Get all the links in the navigation
   const links = document.querySelectorAll('.nav-link');
 
-  // Function to remove 'active' class from all links
   function removeActiveClass() {
-    links.forEach(link => {
-      link.classList.remove('active');
-    });
+    links.forEach(link => link.classList.remove('active'));
   }
 
-  // Function to add 'active' class to the current link
-  function setActiveLink() {
-    // Get the current URL path
-    const currentPath = window.location.pathname;
+  function resolvePath(path) {
+    const a = document.createElement('a');
+    a.href = path; // Converts the path to an absolute path
+    return a.pathname.replace(/\/$/, ''); // Normalize by removing trailing slashes
+  }
 
-    // Remove the 'active' class from all links
+  function setActiveLink() {
+    const currentPath = window.location.pathname.replace(/\/$/, ''); // Normalize current path
+    console.log(`Current Path: ${currentPath}`);
+
     removeActiveClass();
 
-    // Add 'active' class to the matching link
     links.forEach(link => {
-      if (link.getAttribute('href') === currentPath || link.getAttribute('href') === `.${currentPath}`) {
+      const resolvedHref = resolvePath(link.getAttribute('href'));
+      console.log(`Comparing: ${resolvedHref} === ${currentPath}`);
+      if (resolvedHref === currentPath) {
         link.classList.add('active');
+        console.log(`Active Link: ${link.getAttribute('href')}`);
       }
     });
   }
 
-  // Set the active link when the page loads
   setActiveLink();
-
-  // Update the active link when navigation occurs (if using dynamic navigation)
-  window.addEventListener('popstate', setActiveLink);
 });
-
